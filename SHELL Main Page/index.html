@@ -20,6 +20,8 @@
 		
 		<!-- CSS
 		================================================== -->
+		<!-- Login form CSS -->
+        <link rel="stylesheet" href="css/login.css">
 		<!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
 		<!-- bootstrap.min css -->
@@ -36,7 +38,7 @@
         <link rel="stylesheet" href="css/main.css">
 		<!-- Media Queries -->
         <link rel="stylesheet" href="css/media-queries.css">
-
+		
 		<!--
 		Google Font
 		=========================== -->                    
@@ -178,7 +180,7 @@
                         <li><a href="#showcase">Events</a></li>
 			<li><a href="#our-team">Team</a></li>
            		<li><a href="#contact-us">Contact</a></li>
-			<li><button class="btn btn-green animated fadeInUp">Login</button></li>
+			<li><button class="btn btn-green animated fadeInUp" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
                         <li><button class="btn btn-green animated fadeInUp">Sign-Up</button></li>
                     </ul>
                 </nav>
@@ -189,7 +191,42 @@
         <!--
         End Fixed Navigation
         ==================================== -->
+	
+	<!--
+        Start Login Form
+        ==================================== -->
+	<div id="id01" class="modal">
+  
+ 		 <form class="modal-content animate" action="#">
+ 			   <div class="imgcontainer">
+ 			     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+ 			   </div>
+
+ 		   <div class="container">
+ 			     <label for="uname"><b>Username</b></label><br/>
+ 			     <input type="text" placeholder="Enter Username" name="uname" required><br/>
+	
+ 			     <label for="psw"><b>Password</b></label><br/>
+ 			     <input type="password" placeholder="Enter Password" name="psw" required><br/>
+ 	       
+ 			     <button type="submit">Login</button><br/>
+ 			     <label>
+ 			       <input type="checkbox" checked="checked" name="remember"> Remember me
+ 			     </label>
+ 		   </div>
+	
+ 		   <div class="container" style="background-color:#f1f1f1">
+ 			     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+ 			     <span class="psw">Forgot <a href="#">password?</a></span>
+ 		   </div>
+ 		 </form>
+	</div>
+	
+	<!--
+	End Login Form
+	==================================== -->
 		
+	
 		<!--
 		Start About Section
 		==================================== -->
@@ -918,6 +955,8 @@
 		<script src="js/grid.js"></script>
 		<!-- Custom js -->
 		<script src="js/custom.js"></script>
+		<!-- Login js -->
+		<script src="js/login.js"></script>
 
     </body>
 </html>
